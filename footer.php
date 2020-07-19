@@ -1,5 +1,5 @@
  
-    <footer class="footer_style1 p-0 f_14_18 bg-dark text-white">
+    <footer class="footer_style1 bg-dark text-white py-2">
       <div class="container d-none">
             <div class="row">
                 <div class="col-12 col-md-4">
