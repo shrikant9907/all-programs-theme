@@ -129,6 +129,9 @@ $term_name = $term_obj_list['0']->name;
                                             echo "<h4 class='m-0 mb-3'>$methodTitle</h4>";
                                             foreach($methodOptions as $option) {
                                                 $mode = $option['mode'];
+                                                if (!$mode) {
+                                                    $mode = 'php';
+                                                }
                                                 $description = $option['description'];
                                                 $note = $option['note'];
                                                 $file = htmlspecialchars($option['file']);

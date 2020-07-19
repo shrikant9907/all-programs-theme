@@ -115,9 +115,6 @@ $term_name = $term_obj_list['0']->name;
                                     <div class="tutorials_article">
                                     <?php 
                                     $tutorials = $cfs->get('tutorials_loops'); 
-                                    $download_url = $cfs->get('_download_url'); 
-                                    $demo_url = $cfs->get('_demo_link'); 
-//                                    print_r($tutorials);  
                                     if($tutorials){ ?>
                                         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror.js"></script>
                                         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/xml.js"></script>
@@ -133,6 +130,9 @@ $term_name = $term_obj_list['0']->name;
                                             $text = $tutorial['_text'];
                                             $image = $tutorial['_image'];
                                             $mode = $tutorial['mode'];
+                                            if (!$mode) {
+                                                $mode = 'php';
+                                            }
                                             $code = htmlspecialchars($tutorial['_code']);
                                             $code2 = htmlspecialchars($tutorial['_code2']);
                                               
@@ -187,15 +187,6 @@ $term_name = $term_obj_list['0']->name;
                                             $count++;
                                         }
                                     }?>
-                                                 
-                                    <div class="article_buttons">   
-                                        <?php if($download_url!='') { ?>
-                                            <a href="<?php echo $download_url; ?>" class="btn btn-primary" download>Download</a>      
-                                        <?php } ?>
-                                        <?php if($demo_url!='') { ?>
-                                            <!-- <a href="<?php echo $demo_url; ?>" target="_blank" class="btn btn-primary">View Demo</a>       -->
-                                        <?php } ?>
-                                    </div>
                                                 
                                     </div>    
                                 </div>
