@@ -5,8 +5,7 @@ $term_taxonomy = 'programs-category';
 $term_obj_list = get_the_terms( $post->ID, $term_taxonomy );
 $term_id = $term_obj_list['0']->term_id;
 $term_name = $term_obj_list['0']->name;
-
-?> 
+?>  
            
 <section class="page-section">
 <h1 class="text-center bg-dark mb-5 text-white py-3"><?php the_title(); ?></h1>
@@ -61,8 +60,7 @@ $term_name = $term_obj_list['0']->name;
                   <div class="card-header">
                     <h4 class="card-title m-0">Recommended Programs</h4>
                   </div>
-                  <div class="card-body p-0"> 
-                    <ul class='list-group list-group-flush'> 
+                  <div class="card-body"> 
                     <?php   
                     // Post Tags
                     $taxonomies = get_terms( array(
@@ -78,13 +76,12 @@ $term_name = $term_obj_list['0']->name;
                         foreach( $taxonomies as $category ) { 
                         $term_link = get_term_link( $category );
                             if($category->parent == 0) {
-                                $output.= '<li class="list-group-item"><a class="link" href="'.$term_link.'">'. esc_html( $category->name ) .'</a> </li> ';
+                                $output.= '<a class="badge badge-primary mr-2" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
                             }
                         }
                         echo $output; 
                     } 
                     ?> 
-                    </ul> 
                   </div>
                 </div>  
 
@@ -107,7 +104,7 @@ $term_name = $term_obj_list['0']->name;
                                         <img src='<?php echo $image; ?>' alt='<?php the_title(); ?>' />
                                     </div> 
                                 <?php } ?>
-                                <!-- <div class='article-meta-data'><?php //istl_theme_entry_meta(); ?></div> -->
+                                <div class='mb-2'><?php istl_theme_entry_meta(); ?></div>
                    
                                 <div class="card-text">
                                     <?php the_content(); ?>
