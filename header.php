@@ -14,10 +14,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;900&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.min.css" />
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/utils.min.css" />
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css" />
-        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/responsive.css" />
+        <?php $timestamp = date('timestamp'); ?>
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.min.css?ver=<?php echo $timestamp; ?>" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/utils.min.css?ver=<?php echo $timestamp; ?>" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css?ver=<?php echo $timestamp; ?>" />
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/responsive.css?ver=<?php echo $timestamp; ?>" />
 
  
         <?php if(is_taxonomy('tutorial_cat') || is_taxonomy('tutorial_tag') || is_singular('tutorial')) { ?>
@@ -34,7 +35,7 @@
     <div class="row">
     <nav class="navbar navbar-expand-lg navbar-light w-100">
         <a class="navbar-brand" href="<?php echo site_url('/'); ?>">
-            <span class="text-uppercase"><?php echo bloginfo('name'); ?></span>
+            <span class="text-uppercase font_bold link"><?php echo bloginfo('name'); ?></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
         </button>

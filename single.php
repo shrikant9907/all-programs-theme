@@ -1,20 +1,23 @@
 <?php get_header(); ?> 
  
 <section class="page-section">
-<h1 class="bg_orange bg_orange_grid m_b_30 p_t_20 p_b_20 text-white f_24_26 text-center">Blog Details</h1>
+<h1 class="text-center bg-dark mb-5 text-white py-3">Blog Details</h1>
     <div class="container">
         <div class="row">
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-4">
                 
                 <?php echo get_sidebar(); ?>
             
                 <!-- Related Posts -->
-                <div class="category_menus r_5 bg-light p_20 m_b_30">
-                    <p class="m_b_5">Recommended tutorials for you:</p> 
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <h4 class="card-title m-0 f_20_22">Recommended Programs</h4>
+                  </div>
+                  <div class="card-body"> 
                     <?php   
                     // Post Tags
                     $taxonomies = get_terms( array(
-                            'taxonomy' => 'tutorial_cat', 
+                            'taxonomy' => 'programs-category', 
                             'hide_empty' => true,
                             'parent'=>0,
                             'order' => 'asc',
@@ -26,25 +29,25 @@
                         foreach( $taxonomies as $category ) { 
                         $term_link = get_term_link( $category );
                             if($category->parent == 0) {
-                                $output.= '<a class="badge badge-primary bg-primary badge-pills btn-sm m_r_5 m_b_5" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
+                                $output.= '<a class="badge badge-primary mr-2" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
                             }
                         }
                         echo $output; 
                     } 
-                    ?>  
-                </div>
-
-
+                    ?> 
+                  </div>
+                </div>  
+ 
             </div> 
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-md-8">
                     <div class="left_side">
                         <?php  
                             if(have_posts()): 
                                 $count = 0;
                                 while(have_posts()): the_post();  
                         ?>
-                        <div class="card m_b_30">
-                             <div class="card-header bg-light"><h3 class="f_18_22 m-0"><a class="t_deco_none d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3></div>
+                        <div class="card mb-3">
+                             <div class="card-header bg-light"><h3 class="f_20_22 m-0"><a class="t_deco_none d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3></div>
 
                             <div class="card-body f_14_22">
                                 <?php 
@@ -99,20 +102,20 @@
 
                         </div>
                                          
-                        <div class="single_posts_nav">
+                        <div class="single_posts_nav clearfix">
                              <?php
                             $prev_post = get_previous_post();
                             if (!empty( $prev_post )): ?>
-                             <div class='article-prev'>
-                                <a class="btn btn-secondary" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php echo esc_attr( $prev_post->post_title ); ?></a>
+                             <div class='article-prev float-left'>
+                                <a class="btn btn-secondary mb-3" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
                             </div>
                             <?php endif ?>
 
                             <?php
                             $next_post = get_next_post();
                             if (!empty( $next_post )): ?>
-                            <div class='article-nextpost'>
-                                <a class="btn btn-secondary" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php echo esc_attr( $next_post->post_title ); ?></a>
+                            <div class='article-nextpost float-right'>
+                                <a class="btn btn-secondary mb-3" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
                             </div>
                             <?php endif; ?>
                         </div>

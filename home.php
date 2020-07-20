@@ -2,9 +2,42 @@
  
 <section class="page-section">
 
-<h1 class="bg_orange bg_orange_grid m_b_30 p_t_20 p_b_20 text-white f_24_26 text-center">Blog Posts</h1>
+<h1 class="text-center bg-dark mb-5 text-white py-3">Blog Posts</h1>
 <div class="container">
         <div class="row">
+            <div class="col-12 col-sm-4">
+                <?php get_sidebar(); ?>
+
+                               <!-- Related Posts -->
+                               <div class="card mb-4">
+                  <div class="card-header">
+                    <h4 class="card-title m-0 f_20_22">Recommended Programs</h4>
+                  </div>
+                  <div class="card-body"> 
+                    <?php   
+                    // Post Tags
+                    $taxonomies = get_terms( array(
+                            'taxonomy' => 'programs-category', 
+                            'hide_empty' => true,
+                            'parent'=>0,
+                            'order' => 'asc',
+                            'orderby' => 'name'
+                        )
+                    );
+
+                    if ( !empty($taxonomies) ) { 
+                        foreach( $taxonomies as $category ) { 
+                        $term_link = get_term_link( $category );
+                            if($category->parent == 0) {
+                                $output.= '<a class="badge badge-primary mr-2" href="'.$term_link.'">'. esc_html( $category->name ) .'</a>';
+                            }
+                        }
+                        echo $output; 
+                    } 
+                    ?> 
+                  </div>
+                </div> 
+            </div>
             <div class="col-12 col-md-8">
                 <div class="left_side">
                     <?php 
@@ -12,8 +45,8 @@
                             $count = 0;
                             while(have_posts()): the_post();  
                     ?>
-                    <div class="card m_b_30">
-                            <div class="card-header bg-light"><h3 class="f_18_22 m-0"><a class="t_deco_none d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3></div>
+                    <div class="card mb-3">
+                            <div class="card-header bg-light"><h3 class="f_20_22 m-0"><a class="t_deco_none d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3></div>
                             <div class="card-body f_14_22">
                                 <?php echo wp_trim_words(get_the_content(), 30); ?>
                                 <div class="row text-muted f_12_14 m_t_20">
@@ -74,8 +107,7 @@
                     </div>
         
             </div>
-
-            <?php get_sidebar(); ?>
+            
         </div>
     </div>
 </section>

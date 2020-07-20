@@ -20,7 +20,7 @@ function custom_tutorsincity_widgets_init() {
     'id'            => 'main-sidebar-1',
     'before_widget' => '<div id="%1$s" class="card widget_card %2$s">',
     'after_widget'  => '</div></div>',
-    'before_title'  => '<div class="card-header bg-primary"><h3 class="text-white">',
+    'before_title'  => '<div class="card-header"><h3>',
     'after_title'   => '</h3></div><div class="card-body">',
   ));  
     

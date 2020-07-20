@@ -34,7 +34,7 @@ $term_name = $term_obj_list['0']->name;
                 ?>
                 <div class="card mb-4">
                   <div class="card-header">
-                    <h4 class="card-title m-0"><?php echo $term_name; ?></h4>
+                    <h4 class="card-title m-0 f_20_22"><?php echo $term_name; ?></h4>
                   </div>
                   <div class="card-body p-0"> 
                     <ul class='list-group list-group-flush'> 
@@ -58,7 +58,7 @@ $term_name = $term_obj_list['0']->name;
                 <!-- Related Posts -->
                 <div class="card mb-4">
                   <div class="card-header">
-                    <h4 class="card-title m-0">Recommended Programs</h4>
+                    <h4 class="card-title m-0 f_20_22">Recommended Programs</h4>
                   </div>
                   <div class="card-body"> 
                     <?php   
@@ -95,7 +95,7 @@ $term_name = $term_obj_list['0']->name;
                                 while(have_posts()): the_post();  
                         ?>
                         <div class="card mb-4">
-                            <div class="card-header"><h3 class="m-0"><?php the_title(); ?></h3></div>
+                            <div class="card-header"><h3 class="m-0 f_20_22"><?php the_title(); ?></h3></div>
                             <div class="card-body">
                                 <?php 
                                 $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
@@ -126,7 +126,7 @@ $term_name = $term_obj_list['0']->name;
                                             $methodTitle = $method['method_title'];
                                             $methodOptions = $method['method_options'];
                                             echo '<div class="method border-bottom mb-4">';
-                                            echo "<h4 class='m-0 mb-3'>$methodTitle</h4>";
+                                            echo "<h4 class='m-0 mb-3 f_20_22'>$methodTitle</h4>";
                                             foreach($methodOptions as $option) {
                                                 $mode = $option['mode'];
                                                 if (!$mode) {

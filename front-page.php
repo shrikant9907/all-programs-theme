@@ -8,14 +8,19 @@ get_header();
             <div class="mr-auto">
                 <div class="row">
                     <div class="col-12 col-sm-6">
-                        <h1><span class="d-block w-100">Programing is all about practice.</span>Try more programs,<br />Learn with more examples, <br />Improve your logic.</h1>
+                        <h1>
+                        <span class="d-block w-100 mb-3 f_20_22">Programing is all about practice.</span>
+                        <span class="d-block w-100 mb-3 f_30_32">Try more programs,</span>
+                        <span class="d-block w-100 mb-3 f_40_42">Learn with more examples, </span>
+                        <span class="d-block w-100 mb-3 f_50_52">Improve your logic.</span>
+                        </h1>
                         <div class="m_b_40"> 
                             <p class="m_b_30 f_16_22">Our website is specially designed for beginers who want to learn with practice.<br /> We have tried to provide you all types of programs on our website for PHP.</p>
-                            <p><a class="btn btn-primary rounded-pill" href="#learnprograms">Start Now <i class="m_l_5 fa fa-arrow-right" aria-hidden="true"></i></a></p>
+                            <p><a class="btn btn-primary px-4 rounded-pill" href="#learnprograms">Start Now <i class="m_l_5 fa fa-arrow-right" aria-hidden="true"></i></a></p>
                         </div>
                     </div>
                     <div class="col-12 col-sm-6">
-                        <img class="rounded-lg shadow-lg img-fluid" src="http://localhost/tutorialswp/wp-content/uploads/2020/07/Screenshot-from-2020-07-19-10-33-39-e1595135305115.png" alt="" />
+                        <img class="rounded-lg shadow-lg w_400 img-fluid" src="http://localhost/tutorialswp/wp-content/uploads/2020/07/Screenshot-from-2020-07-19-10-33-39-e1595135305115.png" alt="" />
                     </div>
                 </div>
             </div>
@@ -28,9 +33,9 @@ get_header();
         <div class="container">
             <div class="mx-auto">
                 <div class="row">
-                    <div class="col-12"><h2 class="heading_style m_b_20 text-center text_orange">Popular Web Programing</h2>
+                    <div class="col-12"><h2 class="font-weight-bold mb-4 text-center">Popular Web Programing</h2>
                     <div class="m_b_40 mx-auto">
-                        <p class="m_b_20 f_16_22 text-dark text-center">You will get all basics to advanced programs for the popular programing languages and WordPress.</p>
+                        <p class="m_b_20 text-center">You will get all basics to advanced programs for the popular programing languages and WordPress.</p>
                     </div>
                     </div>
                 </div>
@@ -47,8 +52,14 @@ get_header();
                     <div class="col-12 col-sm-4">
                         <div class="card text-center">
                             <div class="card-body">
-                                <a class="card-link h_100 d-flex align-items-center justify-content-center" href="<?php echo $term_link; ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/<?php echo $tutorial['icon']; ?>" alt="" class="img-fluid card-img-top w_100 max_h_100"></a>
-                                <h3 class="card-title"><?php echo $tutorial['title']; ?></h3>
+                                <a class="card-link h_100 d-flex align-items-center justify-content-center" href="<?php echo $term_link; ?>">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/<?php echo $tutorial['icon']; ?>" alt="" class="img-fluid card-img-top w_70 max_h_70">
+                                </a>
+                                <h3 class="card-title f_20_22 font_bold">
+                                    <a class="card-link" href="<?php echo $term_link; ?>">
+                                        <?php echo $tutorial['title']; ?>
+                                    </a>
+                                </h3>
                                 <p><?php echo $tutorial['content']; ?></p>
                                 <!-- <hr />  -->
                                 <ul class="list-group list-group-flush list-unstyled text-left m_b_20 f_14_20 d-none">
@@ -100,14 +111,14 @@ get_header();
         <div class="container w_1000">
             <div class="row">
                 <div class="col-12">
-                        <h2 class="text_orange font-weight-bold mb-4 text-center"><?php echo $programsTitle; ?></h2>
+                        <h2 class="font-weight-bold mb-4 text-center"><?php echo $programsTitle; ?></h2>
                         <!-- <h3 class="position-absolute text-light"><?php //echo $programsSubTitle; ?></h3> -->
                         
                         <div class="category-list text-center p_b_20">
                             <?php foreach($programsCategory as $procat_id) { 
                                 $term = get_term($procat_id);
                             ?>
-                                <a href="<?php echo get_term_link($term); ?>" class="btn btn-outline-secondary"><?php echo $term->name; ?></a>
+                                <a href="<?php echo get_term_link($term); ?>" class="btn btn-outline-primary mx-1"><?php echo $term->name; ?></a>
                             <?php } ?>
                         </div>
                         

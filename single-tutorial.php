@@ -33,7 +33,7 @@ $term_name = $term_obj_list['0']->name;
                 ?>
                 <div class="card mb-4">
                   <div class="card-header">
-                    <h4 class="card-title m-0"><?php echo $term_name; ?></h4>
+                    <h4 class="card-title m-0 f_20_22"><?php echo $term_name; ?></h4>
                   </div>
                   <div class="card-body p-0"> 
                     <ul class='list-group list-group-flush'> 
@@ -57,7 +57,7 @@ $term_name = $term_obj_list['0']->name;
                 <!-- Related Posts -->
                 <div class="card mb-4">
                   <div class="card-header">
-                    <h4 class="card-title m-0">Recommended Programs</h4>
+                    <h4 class="card-title m-0 f_20_22">Recommended Programs</h4>
                   </div>
                   <div class="card-body"> 
                     <?php   
@@ -96,7 +96,7 @@ $term_name = $term_obj_list['0']->name;
                         ?>
                         <div class="card mb-3">
                             
-                            <div class="card-header bg-light text-dark"><h3 class="f_18_22 m-0"><?php the_title(); ?></h3></div>
+                            <div class="card-header bg-light text-dark"><h3 class="f_20_22 m-0"><?php the_title(); ?></h3></div>
                             
                             <div class="card-body f_14_22">
                                 <?php 

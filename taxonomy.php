@@ -39,7 +39,7 @@ $post_type = $post->post_type;
                 ?>
                 <div class="card mb-4">
                   <div class="card-header">
-                    <h4 class="card-title m-0"><?php echo $term_name; ?></h4>
+                    <h4 class="card-title m-0 f_20_22"><?php echo $term_name; ?></h4>
                   </div>
                   <div class="card-body p-0"> 
                     <ul class='list-group list-group-flush'> 
@@ -48,7 +48,7 @@ $post_type = $post->post_type;
                             $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
                         ?>
                             <li class="list-group-item">
-                            <?php echo $count; ?>) <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span class="post-date pull-right"></span>
+                                <?php echo $count; ?>) <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span class="post-date pull-right"></span>
                             </li> 
                         <?php 
                             $count++;
@@ -62,7 +62,7 @@ $post_type = $post->post_type;
                 <!-- Related Posts -->
                 <div class="card mb-4">
                   <div class="card-header">
-                    <h4 class="card-title m-0">Recommended Programs</h4>
+                    <h4 class="card-title m-0 f_20_22">Recommended Programs</h4>
                   </div>
                   <div class="card-body"> 
                     <?php   
@@ -101,7 +101,7 @@ $post_type = $post->post_type;
                     ?>
                     <div class="card mb-4">
                         <div class="card-header">
-                            <h3 class="m-0"><a class="d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3>
+                            <h3 class="m-0 f_20_22"><a class="d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3>
                         </div>
                         <div class="card-body">
                             <?php 
