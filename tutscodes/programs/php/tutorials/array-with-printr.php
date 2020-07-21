@@ -2,7 +2,5 @@
 // This is array of names
 $names_list = array('Aisha', 'Jaxx', 'Julie', 'James');
 
-echo "Names list: <br />";
-foreach($names_list as $name) {
-    echo $name . '<br />';
-}
+// We can display the array using print_r() method for debugging
+print_r($names_list);
