@@ -1,12 +1,12 @@
-<form method="get">
+<form method="post">
     <input type="text" name="yourname" value="" />
     <button type="submit">Submit</button>
 </form>
 
 <?php
-// We can accept the name from the query string
-if (isset($_GET['yourname'])) {
-    $yourname = $_GET['yourname'];
+// We can accept the name with this code
+if (isset($_REQUEST['yourname'])) {
+    $yourname = $_REQUEST['yourname'];
 
     echo "Your name is $yourname";
 }
