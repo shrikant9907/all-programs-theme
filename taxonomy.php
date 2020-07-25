@@ -96,8 +96,9 @@ $post_type = $post->post_type;
                 <div class="right_side">
                     <?php 
                         if(have_posts()): 
-                            $count = 0;
+                            $count = 1;
                             while(have_posts()): the_post();  
+                            if ($count <= 5) {
                     ?>
                     <div class="card mb-4 r_0">
                         <div class="card-header r_0 bg-dark">
@@ -111,8 +112,9 @@ $post_type = $post->post_type;
                                     <img src='<?php echo $image; ?>' alt='<?php the_title(); ?>' />
                                 </div>
                             <?php } ?>
+                            <?php $shortcontent = get_the_content(); ?>
                             <div class="card-text">
-                                <?php the_content(); ?>
+                                <?php echo wp_trim_words(get_the_content(), 100); ?>
                                    
                                 <div class="article_buttons">   
                                     <?php if($download_url!='') { ?>
@@ -126,7 +128,9 @@ $post_type = $post->post_type;
                             </div>
                         </div>
                     </div>
-                    <?php  
+                    <?php
+                        $count++;  
+                        } 
                         endwhile; 
                         wp_reset_query();
                         endif; 
