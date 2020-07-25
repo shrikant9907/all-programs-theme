@@ -1,17 +1,17 @@
 <?php get_header(); ?> 
  
-<section class="page-section">
-<h1 class="text-center bg-dark mb-5 text-white py-3">Blog Details</h1>
+<section class="page-section bg-light pt_60">
+<h1 class="text-center bg-primary mb-5 text-white py_40_40 mont_serrat f_30_32">Blog Details</h1>
     <div class="container">
-        <div class="row">
+        <div class="form-row">
             <div class="col-12 col-sm-4">
                 
-                <?php echo get_sidebar(); ?>
+                <?php get_sidebar(); ?>
             
                 <!-- Related Posts -->
-                <div class="card mb-4">
-                  <div class="card-header">
-                    <h4 class="card-title m-0 f_20_22">Recommended Programs</h4>
+                <div class="card mb-4 r_0">
+                  <div class="card-header bg-dark r_0">
+                    <h4 class="card-title m-0 f_20_22 text-white">Recommended Programs</h4>
                   </div>
                   <div class="card-body"> 
                     <?php   
@@ -46,8 +46,8 @@
                                 $count = 0;
                                 while(have_posts()): the_post();  
                         ?>
-                        <div class="card mb-3">
-                             <div class="card-header bg-light"><h3 class="f_20_22 m-0"><a class="t_deco_none d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3></div>
+                        <div class="card mb-3 r_0">
+                             <div class="card-header r_0 bg-dark "><h3 class="f_20_22 m-0"><a class="tdn text-white d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3></div>
 
                             <div class="card-body f_14_22">
                                 <?php 
@@ -107,7 +107,7 @@
                             $prev_post = get_previous_post();
                             if (!empty( $prev_post )): ?>
                              <div class='article-prev float-left'>
-                                <a class="btn btn-secondary mb-3" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
+                                <a class="btn btn-primary rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
                             </div>
                             <?php endif ?>
 
@@ -115,7 +115,7 @@
                             $next_post = get_next_post();
                             if (!empty( $next_post )): ?>
                             <div class='article-nextpost float-right'>
-                                <a class="btn btn-secondary mb-3" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
+                                <a class="btn btn-primary rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
                             </div>
                             <?php endif; ?>
                         </div>

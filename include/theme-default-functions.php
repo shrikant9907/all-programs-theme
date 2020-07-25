@@ -18,9 +18,9 @@ function custom_tutorsincity_widgets_init() {
     'name'          => __( 'Main Sidebar', 'tutorsincity' ),
     'description'   => 'It will display on Post Details OR Listing pages.',
     'id'            => 'main-sidebar-1',
-    'before_widget' => '<div id="%1$s" class="card widget_card %2$s">',
+    'before_widget' => '<div id="%1$s" class="card r_0 widget_card %2$s">',
     'after_widget'  => '</div></div>',
-    'before_title'  => '<div class="card-header"><h3>',
+    'before_title'  => '<div class="card-header bg-dark text-white r_0"><h3>',
     'after_title'   => '</h3></div><div class="card-body">',
   ));  
     

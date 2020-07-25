@@ -1,16 +1,16 @@
 <?php get_header(); ?> 
- 
-<section class="page-section">
+  
+<section class="page-section bg-light pt_60">
 
-<h1 class="text-center bg-dark mb-5 text-white py-3">Blog Posts</h1>
+<h1 class="text-center bg-primary mb-5 text-white py_40_40 mont_serrat f_30_32">Blog Posts</h1>
 <div class="container">
         <div class="row">
             <div class="col-12 col-sm-4">
                 <?php get_sidebar(); ?>
 
                                <!-- Related Posts -->
-                               <div class="card mb-4">
-                  <div class="card-header">
+                <div class="card mb-4 r_0">
+                  <div class="card-header r_0 bg-dark text-white">
                     <h4 class="card-title m-0 f_20_22">Recommended Programs</h4>
                   </div>
                   <div class="card-body"> 
@@ -45,8 +45,8 @@
                             $count = 0;
                             while(have_posts()): the_post();  
                     ?>
-                    <div class="card mb-3">
-                            <div class="card-header bg-light"><h3 class="f_20_22 m-0"><a class="t_deco_none d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3></div>
+                    <div class="card mb-3 r_0">
+                            <div class="card-header bg-dark r_0"><h3 class="f_20_22 m-0"><a class="text-white tdn d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3></div>
                             <div class="card-body f_14_22">
                                 <?php echo wp_trim_words(get_the_content(), 30); ?>
                                 <div class="row text-muted f_12_14 m_t_20">

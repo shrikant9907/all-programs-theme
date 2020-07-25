@@ -13,10 +13,10 @@ global $post;
 $post_type = $post->post_type;
 ?>
 
-<section class="page-section">
-    <h1 class="text-center bg-dark mb-5 text-white py-3">Category: <?php echo $term_name; ?></h1>
+<section class="page-section bg-light pt_60">
+    <h1 class="text-center bg-primary mb-5 text-white py_40_40 mont_serrat f_30_32">Category: <?php echo $term_name; ?></h1>
     <div class="container">
-        <div class="row">
+        <div class="form-row">
             <div class="col-12 col-sm-3">
                 <?php
                 $args   =   array(
@@ -37,8 +37,8 @@ $post_type = $post->post_type;
                 $count = 1;
                 if(have_posts()):
                 ?>
-                <div class="card mb-4">
-                  <div class="card-header">
+                <div class="card mb-4 r_0">
+                  <div class="card-header r_0 text-white bg-dark">
                     <h4 class="card-title m-0 f_20_22"><?php echo $term_name; ?></h4>
                   </div>
                   <div class="card-body p-0"> 
@@ -48,7 +48,7 @@ $post_type = $post->post_type;
                             $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
                         ?>
                             <li class="list-group-item">
-                                <?php echo $count; ?>) <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span class="post-date pull-right"></span>
+                                <span class="text-primary"><?php echo $count; ?>)</span> <a class="text-dark tdn" href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span class="post-date pull-right"></span>
                             </li> 
                         <?php 
                             $count++;
@@ -60,8 +60,8 @@ $post_type = $post->post_type;
                 <?php endif; ?>   
                 
                 <!-- Related Posts -->
-                <div class="card mb-4">
-                  <div class="card-header">
+                <div class="card mb-4 r_0">
+                  <div class="card-header r_0 text-white bg-dark">
                     <h4 class="card-title m-0 f_20_22">Recommended Programs</h4>
                   </div>
                   <div class="card-body"> 
@@ -99,9 +99,9 @@ $post_type = $post->post_type;
                             $count = 0;
                             while(have_posts()): the_post();  
                     ?>
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h3 class="m-0 f_20_22"><a class="d-block" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3>
+                    <div class="card mb-4 r_0">
+                        <div class="card-header r_0 bg-dark">
+                            <h3 class="m-0 f_20_22"><a class="d-block text-white tdn" href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h3>
                         </div>
                         <div class="card-body">
                             <?php 

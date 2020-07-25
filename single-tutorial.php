@@ -7,10 +7,10 @@ $term_id = $term_obj_list['0']->term_id;
 $term_name = $term_obj_list['0']->name;
 ?> 
            
-<section class="page-section">
-<h1 class="text-center bg-dark mb-5 text-white py-3">Tutorial: <?php the_title(); ?></h1>
+<section class="page-section bg-light pt_60">
+<h1 class="text-center bg-primary mb-5 text-white py_40_40 mont_serrat f_30_32">Tutorial: <?php the_title(); ?></h1>
     <div class="container">
-        <div class="row">
+        <div class="form-row">
             <div class="col-12 col-sm-3">
                 <?php
                 $args   =   array(
@@ -31,8 +31,8 @@ $term_name = $term_obj_list['0']->name;
                 $count = 1;
                 if(have_posts()):
                 ?>
-                <div class="card mb-4">
-                  <div class="card-header">
+                <div class="card r_0 mb-4">
+                  <div class="card-header r_0 bg-dark text-white">
                     <h4 class="card-title m-0 f_20_22"><?php echo $term_name; ?></h4>
                   </div>
                   <div class="card-body p-0"> 
@@ -42,7 +42,7 @@ $term_name = $term_obj_list['0']->name;
                             $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
                         ?>
                             <li class="list-group-item">
-                            <?php echo $count; ?>) <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span class="post-date pull-right"></span>
+                            <span class="text-primary"><?php echo $count; ?>)</span> <a class="tdn text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <span class="post-date pull-right"></span>
                             </li> 
                         <?php 
                             $count++;
@@ -55,8 +55,8 @@ $term_name = $term_obj_list['0']->name;
                 <?php endif; ?>   
 
                 <!-- Related Posts -->
-                <div class="card mb-4">
-                  <div class="card-header">
+                <div class="card r_0 mb-4">
+                  <div class="card-header r_0 bg-dark text-white">
                     <h4 class="card-title m-0 f_20_22">Recommended Programs</h4>
                   </div>
                   <div class="card-body"> 
@@ -94,9 +94,9 @@ $term_name = $term_obj_list['0']->name;
                                 $count = 0;
                                 while(have_posts()): the_post();  
                         ?>
-                        <div class="card mb-3">
+                        <div class="card r_0 mb-3">
                             
-                            <div class="card-header bg-light text-dark"><h3 class="f_20_22 m-0"><?php the_title(); ?></h3></div>
+                            <div class="card-header text-white bg-dark"><h3 class="f_20_22 m-0"><?php the_title(); ?></h3></div>
                             
                             <div class="card-body f_14_22">
                                 <?php 
@@ -108,7 +108,7 @@ $term_name = $term_obj_list['0']->name;
                                         <img src='<?php echo $image; ?>' alt='<?php the_title(); ?>' />
                                     </div> 
                                 <?php } ?>
-                                <div class='mb-2'><?php istl_theme_entry_meta(); ?></div>
+                                <!-- <div class='mb-2'><?php //istl_theme_entry_meta(); ?></div> -->
                    
                                 <div class="article-content">
                                     <?php the_content(); ?>
@@ -197,7 +197,7 @@ $term_name = $term_obj_list['0']->name;
                             $prev_post = get_previous_post();
                             if (!empty( $prev_post )): ?>
                              <div class='article-prev'>
-                                <a class="btn btn-secondary mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
+                                <a class="btn btn-primary rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">Previous: <?php //echo esc_attr( $prev_post->post_title ); ?></a>
                             </div>
                             <?php endif ?>
 
@@ -205,7 +205,7 @@ $term_name = $term_obj_list['0']->name;
                             $next_post = get_next_post();
                             if (!empty( $next_post )): ?>
                             <div class='article-nextpost'>
-                                <a class="btn btn-secondary mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
+                                <a class="btn btn-primary rounded-0 px_25 mb-3 d-inline-block" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">Next: <?php //echo esc_attr( $next_post->post_title ); ?></a>
                             </div>
                             <?php endif; ?>
                         </div>

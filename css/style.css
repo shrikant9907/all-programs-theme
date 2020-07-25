@@ -1,9 +1,45 @@
 
 body { 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.2px;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
 }  
+
+.mont_serrat {
+    font-family: 'Montserrat', sans-serif;
+}
 
 .CodeMirror {
     height: auto !important;
     margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.badge-primary,
+.bg-primary {
+    background-color: #ff2e42 !important;
+}
+.text-primary {
+    color: #ff2e42 !important;
+}
+
+.btn {
+    font-size: 16px;
+}
+
+.btn-primary {
+    background-color:  #ff2e42 !important;
+    border-color:  #ff2e42 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+.f_14_16 {
+    font-size: 14px;
+    line-height: 16px;
 }
