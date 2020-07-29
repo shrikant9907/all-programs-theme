@@ -127,15 +127,22 @@ $term_name = $term_obj_list['0']->name;
                                         $count = 1;
                                         foreach($tutorials as $tutorial){
                                             
+                                            $title = $tutorial['title'];
                                             $text = $tutorial['_text'];
                                             $image = $tutorial['_image'];
                                             $mode = $tutorial['mode'];
+                                            $note = $tutorial['note'];
+                                                
                                             if (!$mode) {
                                                 $mode = 'php';
                                             }
                                             $code = htmlspecialchars($tutorial['_code']);
                                             $code2 = htmlspecialchars($tutorial['_code2']);
                                               
+                                            if ($title) {
+                                                echo "<h4 class='m-0 mb-3 f_20_22 text-primary'>$title</h4>";
+                                            }
+                                            
                                             echo $text;
                                             if($code2!=''){   
                                                  echo "<textarea id='showcode_1$count'>$code2</textarea>";
@@ -176,6 +183,10 @@ $term_name = $term_obj_list['0']->name;
                                              
                                                 <?php
    
+                                            }
+                                            
+                                            if ($note){
+                                                echo '<div class="alert alert-info">'.$note.'</div>';
                                             }
                                              
                                             if($image!='') {    
