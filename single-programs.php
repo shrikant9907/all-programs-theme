@@ -103,8 +103,8 @@ if ($term_obj_list['1']) {
                                 <?php 
                                 $image = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())) ; 
                                 if(has_post_thumbnail()) { ?>
-                                    <div class='card-image-top'>
-                                        <img src='<?php echo $image; ?>' alt='<?php the_title(); ?>' />
+                                    <div class='card-image-top mb_20'>
+                                        <img class="border" src='<?php echo $image; ?>' alt='<?php the_title(); ?>' />
                                     </div> 
                                 <?php } ?>
                                 <!-- <div class='mb-2'><?php //istl_theme_entry_meta(); ?></div> -->
