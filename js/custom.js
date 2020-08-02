@@ -1,5 +1,5 @@
  
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
     
     // Copy to clipboard
     jQuery('.copy_following_code').on('click',function(){

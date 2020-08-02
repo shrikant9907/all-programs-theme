@@ -5,6 +5,10 @@ $term_taxonomy = 'programs-category';
 $term_obj_list = get_the_terms( $post->ID, $term_taxonomy );
 $term_id = $term_obj_list['0']->term_id;
 $term_name = $term_obj_list['0']->name;
+$term_slug = $term_obj_list['0']->slug;
+if ($term_obj_list['1']) {
+    $term_slug = $term_obj_list['1']->slug;
+}
 ?>  
            
 <section class="page-section bg-light pt_60">
@@ -91,7 +95,6 @@ $term_name = $term_obj_list['0']->name;
                     <div class="left_side">
                         <?php 
                             if(have_posts()):   
-                                $count = 0;
                                 while(have_posts()): the_post();  
                         ?>
                         <div class="card mb-4 r_0">
@@ -120,13 +123,14 @@ $term_name = $term_obj_list['0']->name;
                                         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/php.js"></script> 
                                         <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/codemirror/mode/python.js"></script> 
                                         <?php 
-                                        $count = 1;
+                                        $methodCount = 1;
                                         foreach($methods as $method){
                                             
                                             $methodTitle = $method['method_title'];
                                             $methodOptions = $method['method_options'];
                                             echo '<div class="method border-bottom mb-4">';
                                             echo "<h4 class='m-0 mb-3 f_20_22 text-primary'>$methodTitle</h4>";
+                                            $countOption = 1;
                                             foreach($methodOptions as $option) {
                                                 $mode = $option['mode'];
                                                 if (!$mode) {
@@ -136,12 +140,16 @@ $term_name = $term_obj_list['0']->name;
                                                 $note = $option['note'];
                                                 $file = htmlspecialchars($option['file']);
                                                 if($file!=''){   
-                                                    $headerfile = $programsPath.$mode.'/'.$file;    
-                                                    $headercode = htmlspecialchars(file_get_contents($headerfile));  
-                                                    echo "<textarea id='showcode_2$count'>$headercode</textarea>";
+                                               
+                                                $textarea_id = 'tx'.$methodCount.$countOption;
+                                              
+                                                  $headerfile = $programsPath.$term_slug.'/'.$file;
+                                                      
+                                                  $headercode = htmlspecialchars(file_get_contents($headerfile));  
                                                 ?>
+                                                <textarea id='<?php echo $textarea_id; ?>'><?php echo $headercode; ?></textarea>
                                                 <script>
-                                                  var editor = CodeMirror.fromTextArea(document.getElementById("showcode_2<?php echo $count; ?>"), {
+                                                  var editor = CodeMirror.fromTextArea(document.getElementById("<?php echo $textarea_id; ?>"), {
                                                     lineNumbers: true,
                                                     styleActiveLine: false,
                                                     matchBrackets: true,
@@ -152,13 +160,14 @@ $term_name = $term_obj_list['0']->name;
                                             <?php
        
                                                 }                                        
-                                            }
                                             echo '<div class="description pb-0">'.$description.'</div>';
                                             if ($note){
                                                 echo '<div class="alert alert-info">'.$note.'</div>';
                                             }
+                                            $countOption++;
+                                            }
                                             echo "</div>";
-                                            $count++;
+                                            $methodCount++;
                                         }
                                     }?>
                                                 
