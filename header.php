@@ -101,6 +101,7 @@
                         <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/c-plus-plus/'); ?>">Questions in C++</a>
                     </div>
                 </li>
+                <li class="nav-item"> <a class="nav-link pr-0" href="<?php echo site_url('/programs-category/how-to'); ?>">How To</a></li>
                 <li class="nav-item"> <a class="nav-link pr-0" href="<?php echo site_url('/blog'); ?>">Blog</a></li>
             </ul>
         </div>

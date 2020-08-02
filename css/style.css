@@ -7,6 +7,13 @@ body {
     font-weight: 400;
 }  
 
+code {
+    background: #efefef;
+    padding: 4px 5px;
+}
+
+
+
 .mont_serrat {
     font-family: 'Montserrat', sans-serif;
 }

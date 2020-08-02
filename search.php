@@ -1,5 +1,5 @@
 <?php get_header(); ?> 
-<?php include 'search-form.php'; ?>
+<?php include 'search-form.php'; ?> 
 
 <section class="page-section">
     <h1 class="bg-white m_b_30 p_t_20 p_b_20 f_24_26 text-center">Search result for: <?php the_search_query(); ?></h1>
