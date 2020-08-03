@@ -6,7 +6,7 @@ $term_obj_list = get_the_terms( $post->ID, $term_taxonomy );
 $term_id = $term_obj_list['0']->term_id;
 $term_name = $term_obj_list['0']->name;
 $term_slug = $term_obj_list['0']->slug;
-if ($term_obj_list['1']) {
+if ($term_obj_list['1'] && ($term_obj_list['1']->slug == 'how-to')) {
     $term_slug = $term_obj_list['1']->slug;
 }
 ?>  
