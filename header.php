@@ -52,12 +52,24 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    How to
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="<?php echo site_url('/programs-category/bootstrap'); ?>">Bootstrap</a>
+                        <a class="dropdown-item" href="<?php echo site_url('/programs-category/html-and-css'); ?>">HTML and CSS</a>
+                        <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/html-and-css'); ?>">HTML & CSS</a> -->
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo site_url('/programs-category/wordpress'); ?>">WordPress</a>
+                        <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/angular'); ?>">Angular</a> -->
+                        <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/angular'); ?>">JavaScript</a> -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Tutorials
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/basics-of-php/'); ?>">Basics of PHP</a>
-                        <!-- <a class="dropdown-item" href="<?php //echo site_url('/tutorial_cat/php-development/'); ?>">PHP</a> -->
-                        <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/wordpress/'); ?>">WordPress Tutorial</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/html/'); ?>">HTML & CSS Tutorial</a>
                         <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/css/'); ?>">CSS Tutorial</a> -->
@@ -101,7 +113,6 @@
                         <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/c-plus-plus/'); ?>">Questions in C++</a>
                     </div>
                 </li>
-                <li class="nav-item"> <a class="nav-link pr-0" href="<?php echo site_url('/programs-category/how-to'); ?>">How To</a></li>
                 <li class="nav-item"> <a class="nav-link pr-0" href="<?php echo site_url('/blog'); ?>">Blog</a></li>
             </ul>
         </div>
