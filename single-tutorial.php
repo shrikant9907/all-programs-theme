@@ -8,10 +8,10 @@ $term_name = $term_obj_list['0']->name;
 ?> 
            
 <section class="page-section bg-light pt_60">
-<h1 class="text-center bg-primary mb-5 text-white py_40_40 mont_serrat f_30_32">Tutorial: <?php the_title(); ?></h1>
+<h1 class="text-center bg-primary mb-5 text-white py_40_40 mont_serrat f_20_22">Tutorial: <?php the_title(); ?></h1>
     <div class="container">
         <div class="form-row">
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-4">
                 <?php
                 $args   =   array(
                                     'post_type'         =>  'tutorial',
@@ -87,7 +87,7 @@ $term_name = $term_obj_list['0']->name;
 
             <?php //get_sidebar(); ?>
             </div>
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-md-8">
                     <div class="left_side">
                         <?php 
                             if(have_posts()):   

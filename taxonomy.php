@@ -14,10 +14,10 @@ $post_type = $post->post_type;
 ?>
 
 <section class="page-section bg-light pt_60">
-    <h1 class="text-center bg-primary mb-5 text-white py_40_40 mont_serrat f_30_32">Category: <?php echo $term_name; ?></h1>
+    <h1 class="text-center bg-primary mb-5 text-white py_40_40 mont_serrat f_20_22">Category: <?php echo $term_name; ?></h1>
     <div class="container">
         <div class="form-row">
-            <div class="col-12 col-sm-3">
+            <div class="col-12 col-sm-4">
                 <?php
                 $args   =   array(
                                     'post_type'         =>  $post_type,
@@ -92,7 +92,7 @@ $post_type = $post->post_type;
                  
                 <?php //get_sidebar(); ?>
             </div>
-            <div class="col-12 col-sm-7">
+            <div class="col-12 col-sm-8">
                 <div class="right_side">
                     <?php 
                         if(have_posts()): 

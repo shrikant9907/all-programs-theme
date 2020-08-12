@@ -55,6 +55,7 @@
                     How to
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="<?php echo site_url('/programs-category/angular'); ?>">Angular 7/8/9</a>
                         <a class="dropdown-item" href="<?php echo site_url('/programs-category/bootstrap'); ?>">Bootstrap</a>
                         <a class="dropdown-item" href="<?php echo site_url('/programs-category/html-and-css'); ?>">HTML and CSS</a>
                         <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/html-and-css'); ?>">HTML & CSS</a> -->

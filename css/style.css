@@ -12,7 +12,9 @@ code {
     padding: 4px 5px;
 }
 
-
+.container {
+    max-width: 1000px;
+}
 
 .mont_serrat {
     font-family: 'Montserrat', sans-serif;

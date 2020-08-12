@@ -39,15 +39,15 @@ get_header();
         </div>
 
         <?php $topTutorials = $cfs->get('top_tutorials'); ?>
-        <div class="container mx-auto w_1000">
+        <div class="container mx-auto w_800">
             <div class="row">
 
             <?php foreach($topTutorials as $tutorial) {
                 $term_id = $tutorial['category']['0']; 
                 $term_link = get_category_link( $term_id );
                 ?>
-                <div class="col-12 col-sm-4">
-                    <div class="mb_20 card text-center r_30 shadow border-0 hs_11 trans_2_eio">
+                <div class="col-12 col-sm-6">
+                    <div class="mb_20 card text-center r_5 shadow border-0 trans_1_eio">
                         <div class="card-body">
                             <a class="card-link h_100 d-flex align-items-center justify-content-center" href="<?php echo $term_link; ?>">
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/<?php echo $tutorial['icon']; ?>" alt="" class="img-fluid card-img-top w_70 max_h_70">
@@ -59,17 +59,17 @@ get_header();
                             </h3>
                             <p class="text_light"><?php echo $tutorial['content']; ?></p>
                             <!-- <hr />  -->
-                            <ul class="list-group list-group-flush list-unstyled text-left mb_20 f_14_20 d-none">
+                            <ul class="list-group list-group-flush list-unstyled text-left mb_20 f_14_16">
                                 <?php
                                 
                                 $args = array(
-                                        'post_type'         =>  'tutorial', 
+                                        'post_type'         =>  'programs', 
                                         'posts_per_page'    =>  5, 
                                         'orderby'           =>  'id', 
-                                        'order'             =>  'desc', 
+                                        'order'             =>  'asc', 
                                         'tax_query'         =>  array(
                                                                     array(
-                                                                            'taxonomy' => 'tutorial_cat',
+                                                                            'taxonomy' => 'programs-category',
                                                                             'field' => 'id',
                                                                             'terms' => $term_id, 
                                                                             'include_children' => false
@@ -80,7 +80,7 @@ get_header();
                                 foreach($top5_tutorials as $top) {
                                 ?>
                                     <li class="list-group-item px-0 bg-transparent p_y_5">
-                                       <a class="link" href="<?php the_permalink($top->ID); ?>"><i class="fas fa-angle-double-right text_orange m_r_10"></i><span class="text-dark"><?php echo $top->post_title; ?></span></a> 
+                                       <a class="link f_14_16" href="<?php the_permalink($top->ID); ?>"><i class="fas fa-angle-double-right text_orange mr_10"></i><span><?php echo $top->post_title; ?></span></a> 
                                     </li>
                                 <?php    
                                 }    
@@ -105,7 +105,7 @@ get_header();
     <?php $programsCategory = $cfs->get('programs_category')['0']['category'];
                                 ?>    
      <div class="py-5 min_vh_50 d-flex align-items-center">
-        <div class="container w_1000">
+        <div class="container w_800">
             <div class="row">
                 <div class="col-12">
                         <h2 class="mont_serrat heading_style type_2 mbi_60 text-center"><?php echo $programsTitle; ?> <span class="text-primary">Categories</span></h2>

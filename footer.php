@@ -4,28 +4,35 @@
             <div class="row">
                 <div class="col-12 col-md-4">
                   <h2 class="text-primary mont_serrat f_20_22">About allprograms.tech</h2>
-                  <p class="mb_40 text-secondary">Our website is specially designed for the beginner. Who curiously looping for some good program from basic to advanced.</p></div>
+                  <p class="mb_40 text-secondary">Our website is specially designed for the beginner. Who curiously looping for some good program from basic to advanced.</p>
+                 </div> 
                 <div class="col-12 col-md-8">
                     <div class="row">
                       <div class="col-12 col-md-4">
+                        <h3 class="text-primary mont_serrat f_20_22">How to</h3>
+                        <ul class="menu inline-item-group p_x_20">
+                          <li><a class="text-secondary" href="<?php echo site_url('/programs-category/wordpress/'); ?>">WordPress</a></li>
+                          <li><a class="text-secondary" href="<?php echo site_url('/programs-category/angular/'); ?>">Angular</a></li>
+                          <li><a class="text-secondary" href="<?php echo site_url('/programs-category/bootstrap/'); ?>">Bootstrap</a></li>
+                          <li><a class="text-secondary" href="<?php echo site_url('/programs-category/html-and-css/'); ?>">HTML and CSS</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-12 col-md-4">
+                       <h3 class="text-primary mont_serrat f_20_22">Tutorials</h3>
+                        <ul class="menu inline-item-group p_x_20">
+                          <li><a class="text-secondary" href="<?php echo site_url('/tutorial_cat/html/'); ?>">HTML and CSS</a></li>
+                          <li><a class="text-secondary" href="<?php echo site_url('/tutorial_cat/basics-of-php/'); ?>">Basics of PHP</a></li>
+                          <li><a class="text-secondary" href="<?php echo site_url('/basic-commands-for-github/'); ?>">Use of Github</a></li>
+                        </ul>
+                      </div>
+                      <div class="col-12 col-md-4">
                         <h3 class="text-primary mont_serrat f_20_22">Programs</h3>
                         <ul class="menu inline-item-group p_x_20">
-                          <li><a class="text-secondary" href="<?php echo site_url('/programs-category/php/'); ?>">Programs in PHP</a></li>
-                          <li><a class="text-secondary" href="<?php echo site_url('/programs-category/python/'); ?>">Programs in Python</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-12 col-md-4">
-                        <h3 class="text-primary mont_serrat f_20_22">Tutorials</h3>
-                        <ul class="menu inline-item-group p_x_20">
-                        <li><a class="text-secondary" href="<?php echo site_url('/tutorial_cat/html/'); ?>">HTML and CSS Tutorial</a></li>
-                        <li><a class="text-secondary" href="<?php echo site_url('/tutorial_cat/basics-of-php/'); ?>">Basics of PHP Tutorial</a></li>
-                        <li><a class="text-secondary" href="<?php echo site_url('/tutorial_cat/wordpress/'); ?>">WordPress Tutorial</a></li>
-                        <li><a class="text-secondary" href="<?php echo site_url('/tutorial_cat/basic-commands-for-github/'); ?>">Use of Github</a></li>
-                        </ul>
-                      </div>
-                      <div class="col-12 col-md-4">
-                        <h3 class="text-primary mont_serrat f_20_22">Information</h3>
-                        <ul class="menu inline-item-group p_x_20">
+                          <li><a class="text-secondary" href="<?php echo site_url('/programs-category/php/'); ?>">PHP programs</a></li>
+                          <li><a class="text-secondary" href="<?php echo site_url('/programs-category/python/'); ?>">Python programs</a></li>
+                        </ul>         
+                        <h2 class="text-primary mont_serrat f_20_22">Information</h2>
+                         <ul class="menu inline-item-group p_x_20 ">
                           <li><a class="text-secondary" href="<?php echo site_url('/terms-and-conditions'); ?>">Terms and Conditions</a></li>
                         </ul>
                       </div>
@@ -33,11 +40,11 @@
                 </div>
             </div>
         </div>
-
+        <hr />
         <div class="bg_dark2">
             <div class="container">
                 <div class="row">
-                    <div class="col order-3 order-sm-1"><p class="f_14_16 m-0 text-left">Copyright © 2018. All rights reserved.</p></div>
+                    <div class="col order-3 order-sm-1"><p class="f_14_16 m-0 text-left">Copyright © <?php echo date('Y'); ?>. All rights reserved.</p></div>
                     <div class="col order-2 order-sm-2 text-center d-none">
                         <div class="social_links m-0">
                             <a href="#" title="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
