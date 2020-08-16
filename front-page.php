@@ -39,7 +39,7 @@ get_header();
         </div>
 
         <?php $topTutorials = $cfs->get('top_tutorials'); ?>
-        <div class="container mx-auto w_800">
+        <div class="mx-auto mx-auto max_w_100p w_800">
             <div class="row">
 
             <?php foreach($topTutorials as $tutorial) {
@@ -105,7 +105,7 @@ get_header();
     <?php $programsCategory = $cfs->get('programs_category')['0']['category'];
                                 ?>    
      <div class="py-5 min_vh_50 d-flex align-items-center">
-        <div class="container w_800">
+        <div class="container max_w_100p w_800">
             <div class="row">
                 <div class="col-12">
                         <h2 class="mont_serrat heading_style type_2 mbi_60 text-center"><?php echo $programsTitle; ?> <span class="text-primary">Categories</span></h2>
@@ -133,7 +133,7 @@ get_header();
                  </div>
       
                     <!-- Lower Section -->
-                    <div class="mx-auto w_800">
+                    <div class="mx-auto max_w_100p w_800">
                         <div class="row">
                             <div class="col-12 col-sm-6 mb_10 text-left">
                                 <div class="card consult_cards border-0 rounded-0">
@@ -188,7 +188,7 @@ get_header();
                  <?php  $banner_social_links = $cfs->get('banner_social_links', 289); ?>
 
                     <!-- Lower Section -->
-                    <div class="mx-auto w_800 text-center">
+                    <div class="mx-auto max_w_100p w_800 text-center">
                         <div class="form-row">
                         <?php if($banner_social_links) { ?>
                           <?php foreach($banner_social_links as $links) { ?>

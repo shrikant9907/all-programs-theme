@@ -9,11 +9,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="google-site-verification" content="YLQihgCVo22EoKTfvFY58VvdD0R6ZGrq6Odor2ypjcI" />
 
+        <!-- Favicon -->
+        <link rel='icon' href='<?php echo get_stylesheet_directory_uri(); ?>/images/all-programs-favicon.png' type='image/x-icon'/ >
+
         <!-- required Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
-        <link rel='icon' href='<?php echo get_stylesheet_directory_uri(); ?>/images/all-programs-favicon.png' type='image/x-icon'/ >
 
         <?php $timestamp = date('timestamp'); ?>
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/main.min.css?ver=<?php echo $timestamp; ?>" />
@@ -31,9 +32,9 @@
     <div class="container">
     <div class="row">
     <nav class="navbar navbar-expand-lg navbar-light w-100">
-        <a class="navbar-brand" href="<?php echo site_url('/'); ?>">
+        <a class="navbar-brand p-0" href="<?php echo site_url('/'); ?>">
             <!-- <span class="text-uppercase mont_serrat text-primary"><?php //echo bloginfo('name'); ?></span> -->
-            <img class="img-fluid" src="<?php echo get_stylesheet_directory_uri(); ?>/images/all-programs-logo.png" />
+            <img class="img-fluid logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/images/all-programs-logo.png" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> 
             <span class="navbar-toggler-icon"></span>

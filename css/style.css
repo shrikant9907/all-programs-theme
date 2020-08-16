@@ -16,6 +16,10 @@ code {
     max-width: 1000px;
 }
 
+.logo-img {
+    max-height: 46px;
+}
+
 .mont_serrat {
     font-family: 'Montserrat', sans-serif;
 }

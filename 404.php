@@ -1,4 +1,7 @@
-<?php get_header(); ?>
+<?php get_header();
+
+wp_redirect(site_url('/'));
+?>
 
 <section class="page-section bg-white">
     <h1 class="text-center p_y_40 f_30_34">Page not found.</h1>
