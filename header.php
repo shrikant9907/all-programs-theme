@@ -34,7 +34,7 @@
     <nav class="navbar navbar-expand-lg navbar-light w-100">
         <a class="navbar-brand p-0" href="<?php echo site_url('/'); ?>">
             <!-- <span class="text-uppercase mont_serrat text-primary"><?php //echo bloginfo('name'); ?></span> -->
-            <img class="img-fluid logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/images/all-programs-logo.png" />
+            <img class="img-fluid logo-img" src="<?php echo get_stylesheet_directory_uri(); ?>/images/all-programs-logo.png" alt="All Programs" />
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"> 
             <span class="navbar-toggler-icon"></span>

@@ -50,7 +50,7 @@ get_header();
                     <div class="mb_20 card text-center r_5 shadow border-0 trans_1_eio">
                         <div class="card-body">
                             <a class="card-link h_100 d-flex align-items-center justify-content-center" href="<?php echo $term_link; ?>">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/<?php echo $tutorial['icon']; ?>" alt="" class="img-fluid card-img-top w_70 max_h_70">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/<?php echo $tutorial['icon']; ?>" alt="<?php echo $tutorial['title']; ?>" class="img-fluid card-img-top w_70 max_h_70">
                             </a>
                             <h3 class="card-title f_20_22">
                                 <a class="text-primary tdn" href="<?php echo $term_link; ?>">
