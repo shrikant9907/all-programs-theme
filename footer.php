@@ -40,7 +40,7 @@
             </div>
         </div>
         <hr />
-        <div class="bg_dark2">
+        <div class="bg_dark2 text-secondary">
             <div class="container">
                 <div class="row">
                     <div class="col order-3 order-sm-1"><p class="f_14_16 m-0 text-left">Copyright © <?php echo date('Y'); ?>. All rights reserved.</p></div>

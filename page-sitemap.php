@@ -4,6 +4,7 @@
 <h1 class="text-center bg-primary mb-5 text-white py_40_40 mont_serrat f_20_22"><?php the_title(); ?></h1>
     <div class="container">
         <div class="form-row">
+             <div class="col-12 col-md-6">
                
                 <?php
                 $args   =   array(
@@ -16,7 +17,6 @@
                 $count = 1;
                 if(have_posts()):
                 ?>
-             <div class="col-12 col-md-6">
                 <div class="card mb-4 r_0">
                   <div class="card-header r_0 bg-dark text-white">
                     <h4 class="card-title m-0 f_20_22">Pages</h4>
@@ -38,7 +38,6 @@
                     </ul> 
                   </div>
                 </div>   
-                </div>   
                 <?php endif; ?>
 
                   <?php
@@ -52,7 +51,6 @@
                 $count = 1;
                 if(have_posts()):
                 ?>
-             <div class="col-12 col-md-6">
                 <div class="card mb-4 r_0">
                   <div class="card-header r_0 bg-dark text-white">
                     <h4 class="card-title m-0 f_20_22">Posts</h4>
@@ -74,7 +72,6 @@
                     </ul> 
                   </div>
                 </div>   
-                </div>   
                 <?php endif; ?>
 
 
@@ -89,7 +86,6 @@
                 $count = 1;
                 if(have_posts()):
                 ?>
-             <div class="col-12 col-md-6">
                 <div class="card mb-4 r_0">
                   <div class="card-header r_0 bg-dark text-white">
                     <h4 class="card-title m-0 f_20_22">Tutorials: HTML and CSS, PHP, Python</h4>
@@ -111,9 +107,9 @@
                     </ul> 
                   </div>
                 </div>   
-                </div>   
                 <?php endif; ?>
-
+            </div>   
+           
                 <!-- Tutorials List -->
                 <?php
                 $args   =   array(
