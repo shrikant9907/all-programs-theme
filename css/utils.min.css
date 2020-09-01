@@ -9023,7 +9023,7 @@ input[type=button] {
 
 /*Nav Menus*/
 header .navbar-expand-lg .navbar-nav .nav-link {
-  padding: 10px 24px !important;
+  padding: 10px 15px !important;
 }
 
 header .nav-item.show .nav-link,
@@ -10094,11 +10094,6 @@ ul.social_links2 li:hover,
     line-height: 18px;
     color: #494949 !important;
     padding-top: 14px !important;
-  }
-
-  .scrolled header .navbar-nav a.nav-link {
-    padding: 18px 24px !important;
-    color: #494948;
   }
 
   .scrolled .go_top_arrow {

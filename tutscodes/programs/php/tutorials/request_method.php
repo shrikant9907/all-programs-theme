@@ -1,3 +1,4 @@
+<!-- get or post both can be used for sending data -->
 <form method="post">
     <input type="text" name="yourname" value="" />
     <button type="submit">Submit</button>

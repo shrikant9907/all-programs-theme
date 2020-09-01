@@ -143,9 +143,9 @@ function ric_media_uploader() {
 }
 
 
-jQuery(window).scroll(function($) {    
+jQuery(window).scroll(function() {    
   if (jQuery(window).width() > 767) {
-   var scroll = $(window).scrollTop();
+   var scroll = jQuery(window).scrollTop();
     if (scroll >= 580) {
         jQuery("body").addClass("scrolled");
     } else {

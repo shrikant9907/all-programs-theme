@@ -1,6 +1,4 @@
 <?php
-
-
  /*
   * Interview Questions Post Type
   */ 
@@ -115,3 +113,4 @@ function istl_get_interview_questions_details($post_id) {
     }
     return $output;  
 }
+

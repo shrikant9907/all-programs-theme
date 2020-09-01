@@ -13,7 +13,8 @@
         <link rel='icon' href='<?php echo get_stylesheet_directory_uri(); ?>/images/all-programs-favicon.png' type='image/x-icon'/ >
 
         <!-- required Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
         <?php $timestamp = date('timestamp'); ?>
@@ -43,10 +44,10 @@
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item"> <a class="nav-link" href="<?php echo site_url('/'); ?>">Home</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Programs
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
                         <a class="dropdown-item" href="<?php echo site_url('/programs-category/php/'); ?>">Programs in PHP</a>
                         <a class="dropdown-item" href="<?php echo site_url('/programs-category/python/'); ?>">Programs in Python</a>
                         <!-- <div class="dropdown-divider"></div> -->
@@ -55,29 +56,25 @@
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     How to
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         <a class="dropdown-item" href="<?php echo site_url('/programs-category/wordpress'); ?>">WordPress</a>
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="<?php echo site_url('/programs-category/django'); ?>">Django</a>
-                        <div class="dropdown-divider"></div>                        <a class="dropdown-item" href="<?php echo site_url('/programs-category/angular'); ?>">Angular</a>
-                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="<?php echo site_url('/programs-category/angular'); ?>">Angular</a>
                         <a class="dropdown-item" href="<?php echo site_url('/programs-category/bootstrap'); ?>">Bootstrap</a>
                         <a class="dropdown-item" href="<?php echo site_url('/programs-category/html-and-css'); ?>">HTML and CSS</a>
-                        <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/html-and-css'); ?>">HTML & CSS</a> -->
-                        <!-- <a class="dropdown-item" href="<?php echo site_url('/programs-category/angular'); ?>">JavaScript</a> -->
                     </div>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Tutorials
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
                         <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/basics-of-php/'); ?>">Basics of PHP</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/html/'); ?>">HTML & CSS Tutorial</a>
+                        <!-- <div class="dropdown-divider"></div> -->
+                        <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/html/'); ?>">HTML & CSS</a>
                         <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/css/'); ?>">CSS Tutorial</a> -->
                         <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/jquery/'); ?>">jQuery Tutorial</a> -->
                         <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/bootstrap/'); ?>">Bootstrap Tutorial</a> -->
@@ -86,37 +83,13 @@
                         <!-- <a class="dropdown-item" href="<?php echo site_url('/tutorial_cat/django/'); ?>">Django Tutorial</a> -->
                     </div>
                 </li>
-                <li class="nav-item dropdown d-none">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Examples
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Questions
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?php echo site_url('/examples-category/html-and-css/'); ?>">HTML & CSS Examples</a>
-                        <a class="dropdown-item" href="<?php echo site_url('/examples-category/bootstrap/'); ?>">Bootstrap Examples</a>
-                        <!-- <div class="dropdown-divider"></div> -->
-                        <!-- <a class="dropdown-item" href="<?php echo site_url('/examples-category/php/'); ?>">PHP examples</a> -->
-                        <!-- <a class="dropdown-item" href="<?php echo site_url('/examples-category/python/'); ?>">Python examples</a> -->
-                        <!-- <div class="dropdown-divider"></div> -->
-                        <!-- <a class="dropdown-item" href="<?php echo site_url('/examples-category/jquery/'); ?>">jQuery examples</a> -->
-                        <!-- <a class="dropdown-item" href="<?php echo site_url('/examples-category/javascript/'); ?>">JavaScript examples</a> -->
-                    </div>
-                </li>
-                <li class="nav-item dropdown  d-none">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Interview Questions
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/python/'); ?>">Web Design</a>
-                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/django/'); ?>">Web Development</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/html/'); ?>">Questions in HTML</a>
-                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/css/'); ?>">Questions in CSS</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/php/'); ?>">Questions in PHP</a>
-                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/python/'); ?>">Questions in Python</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/c/'); ?>">Questions in C</a>
-                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-category/c-plus-plus/'); ?>">Questions in C++</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-in-php/'); ?>">PHP interview questions</a>
+                        <a class="dropdown-item" href="<?php echo site_url('/interview-questions-in-wordpress/'); ?>">WordPress interview questions</a>
                     </div>
                 </li>
                 <li class="nav-item"> <a class="nav-link pr-0" href="<?php echo site_url('/blog'); ?>">Blog</a></li>

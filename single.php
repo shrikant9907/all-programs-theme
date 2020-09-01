@@ -59,9 +59,9 @@
                                         <img src='<?php echo $image; ?>' alt='<?php the_title(); ?>' />
                                     </div>
                                 <?php } ?>
-                                <div class="row text-muted f_12_14 m_b_20">
-                                    <div class="col-4">
-                                        <span><i class="fa fa-bookmark m_r_10"></i> Categories:  
+                                <div class="row text-muted f_12_14 mb_20">
+                                    <div class="col-12 col-sm-6">
+                                        <span><i title="Categories" class="fa fa-bookmark mr_10"></i>  
                                             <?php
 
                                                 $categories = get_the_category();
@@ -76,8 +76,8 @@
 
                                             ?></span>
                                     </div>
-                                    <div class="col-4">
-                                        <span><i class="fas fa-tags m_r_10"></i> Tags: 
+                                    <div class="col-4 d-none">
+                                        <span><i title="Tags" class="fas fa-tags mr_10"></i> 
                                             <?php
                                                 $tags = get_the_tags();
                                                 foreach ( $tags as $tag ) {
@@ -91,8 +91,8 @@
                                         </span>
                                     </div>
 
-                                    <div class="col-4">
-                                        <span><i class="fas fa-clock m_r_10"></i>Posted on: <?php echo get_the_date(); ?></span>
+                                    <div class="col-12 col-sm-6">
+                                        <span><i class="fas fa-clock mr_10"></i>Posted on: <?php echo get_the_date(); ?></span>
                                     </div>
                                 </div>
                           

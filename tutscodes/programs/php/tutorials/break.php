@@ -4,8 +4,8 @@ $names_list = array('Aisha', 'Jaxx', 'Julie', 'James');
 
 echo "Names list: <br />";
 foreach($names_list as $name) {
+    echo $name . '<br />';    
     if ($name == 'Jaxx') {
-        echo $name . '<br />';
         break;
     }
 }
