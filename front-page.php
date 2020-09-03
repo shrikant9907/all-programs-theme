@@ -3,19 +3,25 @@ get_header();
 // include 'search-form.php';
 ?>
 
-<div class="pt_100 min_vh_100 d-flex align-items-center">
+<div class="pt_100 d-flex align-items-center">
  <div class="container">
-  <div class="mr-auto text-center">
+  <div class="mr-auto text-center py_40_40">
     <div class="row">
      <div class="col-12">
       <h1>
-       <span class="d-block w-100 text-primary mb_10 f_30_32">Programing is all about practice.</span>
-       <span class="d-block w-100 text_light mb_20 f_40_42">Try more programs, with more examples, </span>
-       <span class="d-block w-100 mb_30 text-primary mont_serrat f_40_42">To improve your programming logics</span>
+        <span class="d-block w-100 text-primary mb_10 f_30_32">Welcome to All Programs .tech</span>
       </h1>
+<!--       <h2>
+           <span class="d-block w-100 text_light mb_20 f_40_42">Programing is all about practice. </span>
+           <span class="d-block w-100 text_light mb_20 f_40_42">Try more programs, with more examples, </span>
+       <span class="d-block w-100 mb_30 text-primary mont_serrat f_40_42">To improve your programming logics</span>
+      
+      </h2> -->
       <div class="mb_40 f_16_22"> 
-        <p class="mb_10">Our website is specially designed for beginers who want to learn with practice.</p>
-        <p class="mb_40"> We have tried to provide you all types of programs on our website for PHP.</p>
+        <p class="mb_10">You will get the best online tutorials, programs and interview questions in programming on our website for free. We are creating a large collection of programs for our users to learn programming from beginner level to advanced. We are using a practical approach to a programming language like PHP or Python.</p>
+        <p>As we know, programming is all about practice.<br />
+So, We are going to provide you all types of programs that will be easy to learn to the programming. <br />
+Try more programs with more examples to improve your programming skills and logic.</p>
         <p><a class="btn btn-primary px_50  pt_10 pb_10 rounded-pill" href="#learnprograms">Start Now</a></p>
       </div>
      </div>

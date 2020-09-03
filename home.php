@@ -51,7 +51,7 @@
                                 <?php echo wp_trim_words(get_the_content(), 30); ?>
                                 <div class="row text-muted f_12_14 m_t_20">
                                     <div class="col-6">
-                                        <span><i class="fa fa-bookmark m_r_10"></i> Categories:  
+                                        <span><i class="fa fa-bookmark mr_10"></i> Categories:  
                                             <?php
 
                                                 $categories = get_the_category();
@@ -66,17 +66,17 @@
 
                                             ?></span>
                                     </div>
-                                    <div class="col-6">
-                                        <span><i class="fas fa-tags m_r_10"></i> Tags: 
+                                    <div class="col-6 d-none">
+                                        <span><i class="fas fa-tags mr_10"></i> Tags: 
                                             <?php
-                                                $tags = get_the_tags();
-                                                foreach ( $tags as $tag ) {
-                                                    $tag_link = get_tag_link( $tag->term_id );
+                                                // $tags = get_the_tags();
+                                                // foreach ( $tags as $tag ) {
+                                                //     $tag_link = get_tag_link( $tag->term_id );
                                                              
-                                                    $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
-                                                    $html .= "{$tag->name}</a>";
-                                                }
-                                                echo $html;
+                                                //     $html .= "<a href='{$tag_link}' title='{$tag->name} Tag' class='{$tag->slug}'>";
+                                                //     $html .= "{$tag->name}</a>";
+                                                // }
+                                                // echo $html;
                                             ?>
                                         </span>
                                     </div>
@@ -87,7 +87,7 @@
                                     <div class="col-8">
                                          <?php if($avatar = get_avatar(get_the_author_meta('ID')) !== FALSE): 
                                               $author_id =  get_the_author_meta('ID'); ?>
-                                            <span class="w_40 d-inline-block m_r_10"><img src="<?php echo esc_url( get_avatar_url( $author_idD ) ); ?>" class="img-fluid img-thumbnail rounded-circle" alt=""></span>
+                                            <span class="w_40 d-inline-block mr_10"><img src="<?php echo esc_url( get_avatar_url( $author_idD ) ); ?>" class="img-fluid img-thumbnail rounded-circle" alt=""></span>
                                         <?php endif; ?> 
                                          <span class="d-inline-block">Posted by: <?php the_author(); ?>, <?php echo human_time_diff( get_the_time( 'U' ), current_time( 'timestamp' ) ).' '.__( 'ago' ); ?></span>
                                     </div>
